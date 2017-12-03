@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 
 
 import { AppComponent } from './app.component';
+import { GraphComponent } from './component/graph/graph.component';
+import { ParserService } from './service/parser.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GraphComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ChartsModule
   ],
-  providers: [],
+  providers: [ParserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
